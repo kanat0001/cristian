@@ -54,17 +54,17 @@ export default function RightClickScroll() {
       onMouseLeave={() => isDragging && mouseUp()}
     >
       <div className="card">
-        <img src="../../public/Eventos Premium 1.svg" alt="" className='card-img' />
+        <img src="/Eventos Premium 1.svg" alt="" className='card-img' />
         <h3 className='card-title'> Eventos Premium</h3>
         <p className='card-subtitle'>Elegante - Serio - Estatus</p>
       </div>
       <div className="card">
-        <img src="../../public/MacBook Pro 14_ - 1 3.svg" alt="" className='card-img'/>
+        <img src="/MacBook Pro 14_ - 1 3.svg" alt="" className='card-img'/>
         <h3 className='card-title'>Eventos Premium</h3>
         <p className='card-subtitle'>Elegante - Serio - Estatus</p>
       </div>
       <div className="card">
-        <img src="../../public/Eventos Premium 1.svg" alt="" className='card-img'/>
+        <img src="/Eventos Premium 1.svg" alt="" className='card-img'/>
         <h3 className='card-title'>Eventos Premium</h3>
         <p className='card-subtitle'>Elegante - Serio - Estatus</p>
       </div>

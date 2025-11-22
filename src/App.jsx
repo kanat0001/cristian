@@ -78,7 +78,7 @@ function App() {
             <img src="/Arrow_01.svg" alt="" className='home__right-arrow' />
           </div>
           <div className='home__left'>
-            <img src="/public/Allura UI Windows.svg" alt="" className='home__left-img' />
+            <img src="/Allura UI Windows.svg" alt="" className='home__left-img' />
           </div>
         </section>
 
@@ -145,22 +145,22 @@ function App() {
             </div>
             <div className='about-me__content'>
               <div className='about-me__icon-left'>
-                <img src="/public/medal-star.svg"   alt="" />
+                <img src="/medal-star.svg"   alt="" />
                 <p className='about-me__icon-percent'>100%</p>
                 <p className='about-me__icon-text'>Responsibility</p>
               </div>
 
               <div className='about-me__img'>
-                <img src="/public/Group 27.svg" alt="" />
+                <img src="/Group 27.svg" alt="" />
               </div>
               
               <div className='about-me__icon-right'>
-                <img src="/public/Icono.svg" alt="" />
+                <img src="/Icono.svg" alt="" />
                 <p className='about-me__icon-percent'>100%</p>
                 <p className='about-me__icon-text'>Puntuality</p>
                 
               </div>
-              <img src="/public/Highlight_04.svg" alt="" className='about-me__forgot'/>
+              <img src="/Highlight_04.svg" alt="" className='about-me__forgot'/>
               
             </div>
             <div className='dots2'>
@@ -195,7 +195,7 @@ function App() {
             <h2 className='porfolio__title'>
               Portfolio
             </h2>
-            <img src="/public/Underline_06.svg" alt="" className='portfolio__underline' />
+            <img src="/Underline_06.svg" alt="" className='portfolio__underline' />
           </div>
           <div>
             <div>
