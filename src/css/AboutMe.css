@@ -1,0 +1,368 @@
+.about-me {
+  background-image:
+   
+   url('/public/Vector-Cuadros.png'),
+   url('/public/Vector\ 2.svg');
+  background-size: cover;       /* картинка растягивается и обрезается, чтобы покрыть весь блок */
+  background-position: center;  /* центрируем изображение */
+  background-repeat: no-repeat; /* не повторять */
+  width: 100%;
+  min-height: 1200px;            /* минимальная высота секции */
+}
+
+
+.about-me__main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.about-me__main h2{
+  color: white;
+  margin-top: 70px;
+  font-size: 64px;
+  font-weight: 600;
+
+}
+
+
+.about-me__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 270px;
+  width: 100%;
+  max-width: 1200px;
+  height: 360px;
+  background-color: white;
+  border: none;
+  border-radius: 60px;
+  position: relative;
+
+}
+
+.about-me__img{
+  position: absolute;
+  top: -324px;
+  right: 220px;
+}
+
+.about-me__icon-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 120px;
+}
+.about-me__icon-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 120px;
+}
+.about-me__icon-percent{
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+  color: #1B1C37;
+
+}
+.about-me__icon-text {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  color: #5F6073;
+}
+
+
+.dots {
+  display: grid;
+  grid-template-columns: repeat(3, 10px); /* 3 точки в ряд */
+  grid-template-rows: repeat(3, 10px);    /* 3 ряда */
+  gap: 20px;                              /* расстояние между точками */
+  width: max-content;                     /* блок подгоняется под контент */
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+.dots2{
+  display: grid;
+  grid-template-columns: repeat(6, 10px); /* 3 точки в ряд */
+  grid-template-rows: repeat(3, 10px);    /* 3 ряда */
+  gap: 20px;                              /* расстояние между точками */
+  width: max-content;                     /* блок подгоняется под контент */
+  position: absolute;
+  right: 0;
+  top: 1000px;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;   /* делаем кружочком */
+  background-color: white;
+}
+
+.about-me__forgot{
+  position: absolute;
+  top: -84px;
+  right: -90px;
+  width: 150px;
+}
+
+@media(max-width:1440px){
+  .about-me__content{
+    max-width: 1000px;
+  }
+  .about-me__forgot{
+ 
+  
+}
+
+  .about-me__icon-left img{
+    width: 80px;
+  }
+  .about-me__icon-right img{
+    width: 80px;
+  }
+
+  .about-me__icon-percent{
+    font-size: 40px;
+  }
+
+  .about-me__icon-text{
+    font-size: 30px;
+  }
+  .about-me__img{
+  position: absolute;
+  top: -277px;
+  right: 163px;
+}
+  .about-me__img img{
+    width: 600px;
+  }
+}
+@media(max-width:1280px){
+  .about-me__forgot{
+ 
+  
+}
+}
+@media(max-width:1200px){
+  .about-me {
+    min-height: 1000px;
+  }
+  .about-me__forgot{
+    width: 100px;
+    top: -46px;
+    right: -57px;
+  
+}
+
+  .about-me__content{
+    margin-top: 230px;
+    max-width: 700px;
+    height: 250px;
+  }
+  .about-me__main h2{
+    font-size: 50px;
+  }
+
+  .about-me__img{
+  position: absolute;
+  top: -276px;
+  right: 68px;
+  }
+  .about-me__img img{
+    width: 500px;
+  }
+  .dots2{
+    top: 800px;
+  }
+
+}
+
+@media(max-width:768px){
+  .about-me{
+    min-height: 800px;
+  }
+    .about-me__content{
+    margin-top: 150px;
+    max-width: 500px;
+    height: 150px;
+    border-radius: 40px;
+  }
+  .about-me__forgot{
+    width: 70px;
+    top: -46px;
+    right: -57px;
+  
+}
+
+  .about-me__img{
+  position: absolute;
+  top: -173px;
+  right: 81px;
+  }
+  .about-me__img img{
+    width: 300px;
+  }
+   .about-me__icon-left img{
+    width: 50px;
+  }
+  .about-me__icon-right img{
+    width: 50px;
+  }
+
+  .about-me__icon-percent{
+    font-size: 30px;
+  }
+
+  .about-me__icon-text{
+    font-size: 20px;
+  }
+  .dot{
+    width: 10px;
+    height: 10px;
+  }
+  .dots{
+    gap: 10px;
+    
+  }
+  .dots2{
+    gap: 10px;
+    top: 600px;
+  }
+}
+
+
+@media (max-width: 576px){
+  .about-me{
+    min-height: 600px;
+  }
+    .about-me__content{
+    margin-top: 100px;
+    max-width: 400px;
+    height: 100px;
+    border-radius: 20px;
+  }
+    .about-me__forgot{
+    width: 50px;
+    top: -28px;
+    right: -33px;
+  
+}
+    .about-me__main h2{
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  .about-me__img{
+  position: absolute;
+  top: -96px;
+  right: 90px;
+  }
+  .about-me__img img{
+    width: 200px;
+  }
+  .about-me__icon-left{
+    margin-right: 30px;
+  }
+  .about-me__icon-right{
+    margin-left: 0px;
+
+  }
+
+   .about-me__icon-left img{
+    width: 40px;
+  }
+  .about-me__icon-right img{
+    width: 40px;
+  }
+
+  .about-me__icon-percent{
+    font-size: 20px;
+  }
+
+  .about-me__icon-text{
+    font-size: 14px;
+  }
+    .dots2{
+    gap: 10px;
+    top: 400px;
+  }
+}
+
+@media (max-width: 450px){
+  .about-me{
+    width: 100%;
+    min-height: 400px;
+  }
+    .about-me__content{
+    margin-top: 60px;
+    max-width: 300px;
+    height: 100px;
+    border-radius: 20px;
+  }
+    .about-me__main h2{
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .about-me__img{
+  position: absolute;
+  top: -75px;
+  right: 64px;
+  }
+  .about-me__img img{
+    width: 150px;
+  }
+  .about-me__icon-left{
+    margin-right: 30px;
+  }
+  .about-me__icon-right{
+    margin-left: 0px;
+
+  }
+
+   .about-me__icon-left img{
+    width: 30px;
+  }
+  .about-me__icon-right img{
+    width: 30px;
+  }
+
+  .about-me__icon-percent{
+    font-size: 18px;
+  }
+
+  .about-me__icon-text{
+    font-size: 14px;
+  }
+  .dots{
+    gap: 5px;
+  }
+    .dots2{
+    gap: 5px;
+    top: 300px;
+  }
+  .dot{
+    width: 7px;
+    height: 7px
+  }
+}
+
+@media (max-width: 450px){
+    .about-me__content{
+    margin-top: 60px;
+    max-width: 250px;
+    height: 100px;
+    border-radius: 20px;
+  }
+  .about-me__img{
+  position: absolute;
+  top: -75px;
+  right: 36px;
+  }
+}

@@ -1,0 +1,224 @@
+header{
+  display: flex;
+  justify-content: center;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  width: 1311px;
+  background-color: #1B1C37;
+  border-radius: 14px;
+  border: none;
+
+}
+
+
+
+.nav__centr{
+  display: flex;
+
+
+}
+.nav__centr li{
+  margin-left: 26px;
+  text-decoration: none;
+  list-style: none;
+  
+
+}
+.nav__centr li a{
+  text-decoration: none;
+  color: white;
+
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size:  17px;
+  font-weight: 500;
+}
+
+
+.avatar{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to right, #B224EF, #7579FF);
+
+}
+
+.contact-btn{
+  width: 174px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: #7579FF;
+  
+
+}
+
+
+
+
+
+
+/* Styling for the Mobile Menu Panel */
+.mobile-menu {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 200px; /* Adjust width as needed */
+  height: 100%;
+  background-color: #1B1C37; /* Choose your background color */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%); /* Initially hide off-screen to the right */
+  transition: transform 0.3s ease-in-out; /* Smooth sliding transition */
+  z-index: 100;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Class to slide the menu into view */
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.mobile-nav__list li {
+  margin-bottom: 15px;
+}
+
+.mobile-nav__list a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  padding: 10px 0;
+}
+
+.mobile-contact-btn {
+  /* Style your contact button for the mobile menu */
+  width: 100%;
+  text-align: center;
+  /* Ensure it has similar styling to your desktop button */
+}
+
+
+/* Styling for the Burger Button */
+.burger-btn {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative; /* To ensure it's positioned correctly */
+  z-index: 110; /* Above the mobile menu */
+}
+
+.burger-line {
+  width: 30px;
+  height: 3px;
+  background-color: white; /* Line color */
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+/* Optional: Animation for the burger icon when open */
+.burger-line:nth-child(1).open {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger-line:nth-child(2).open {
+  opacity: 0;
+}
+
+.burger-line:nth-child(3).open {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+@media (max-width: 800px) {
+  /* Hide the desktop navigation links and contact button */
+  .nav__desktop {
+    display: none !important;
+  }
+
+  /* Show the burger button */
+  .burger-btn {
+    display: block;
+  }
+
+  /* Adjust header/nav positioning if necessary for the burger button */
+  header nav {
+    /* For example, ensure space for the logo and burger button */
+    justify-content: space-between;
+  }
+  nav{
+    margin-top: 90px;
+  }
+  .mobile-menu{
+    top: 90px;
+  }
+}
+
+@media(max-width:650px){
+
+  nav{
+    margin-top: 44px;
+  }
+
+  .mobile-menu{
+    top: 45px;
+  }
+
+}
+
+/* 
+.circle {
+    --size: 200px;
+    --stroke: 20px;
+    --value: 80; 
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(
+        #7579FF calc(var(--value) * 1%), 
+        #e6e6e6 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+.span {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
