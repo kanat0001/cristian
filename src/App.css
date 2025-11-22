@@ -297,6 +297,10 @@ left: 500px;
 
 @media (max-width: 800px) {
 
+  .footer{
+    margin-top: 40px;
+  }
+
   .link img{
   width: 20px;
   }
