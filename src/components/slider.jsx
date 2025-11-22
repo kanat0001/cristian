@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import '../components/slider.css';
+
 export default function RightClickScroll() {
   const wrapperRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -8,18 +9,23 @@ export default function RightClickScroll() {
   const [velocity, setVelocity] = useState(0);
   let animationFrame;
 
+  const getEventX = (e) => {
+    // для touch берем первый touch
+    return e.touches ? e.touches[0].pageX : e.pageX;
+  };
+
   const mouseDown = (e) => {
-    if (e.button !== 0) return; // только правая кнопка
-    e.preventDefault(); // отключаем контекстное меню
+    if (e.button !== undefined && e.button !== 0) return; // только правая кнопка мыши
+    e.preventDefault();
     setIsDragging(true);
-    setStartX(e.pageX - wrapperRef.current.offsetLeft);
+    setStartX(getEventX(e) - wrapperRef.current.offsetLeft);
     setScrollLeft(wrapperRef.current.scrollLeft);
     cancelAnimationFrame(animationFrame);
   };
 
   const mouseMove = (e) => {
     if (!isDragging) return;
-    const x = e.pageX - wrapperRef.current.offsetLeft;
+    const x = getEventX(e) - wrapperRef.current.offsetLeft;
     const walk = x - startX;
     wrapperRef.current.scrollLeft = scrollLeft - walk;
     setVelocity(walk);
@@ -52,10 +58,13 @@ export default function RightClickScroll() {
       onMouseMove={mouseMove}
       onMouseUp={mouseUp}
       onMouseLeave={() => isDragging && mouseUp()}
+      onTouchStart={mouseDown}
+      onTouchMove={mouseMove}
+      onTouchEnd={mouseUp}
     >
       <div className="card">
         <img src="/Eventos Premium 1.svg" alt="" className='card-img' />
-        <h3 className='card-title'> Eventos Premium</h3>
+        <h3 className='card-title'>Eventos Premium</h3>
         <p className='card-subtitle'>Elegante - Serio - Estatus</p>
       </div>
       <div className="card">
@@ -68,7 +77,6 @@ export default function RightClickScroll() {
         <h3 className='card-title'>Eventos Premium</h3>
         <p className='card-subtitle'>Elegante - Serio - Estatus</p>
       </div>
-
     </div>
   );
 }
